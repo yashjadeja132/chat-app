@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.chat-app {
+  margin: 13px 20px;
+  display: flex;
+  height: 97vh;
+  border-radius: 8px;
+  box-shadow: 2px 2px 20px 2px #333;
+}
+
+.chat-app .chat-list {
+  width: 40%;
+  border-right: 1px solid #333;
+}
+
+.chat-app .chat-box {
+  width: 100%;
+}
+
+.header {
+  border-bottom: 1px solid #333;
+}
+
+.user-info {
+  margin: 15px 20px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 5px 1px #ddd;
+  gap: 10px;
+}
+
+.user-info .image {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+
+.user-info .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-info .info {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.info h4 {
+  font-size: 20px;
+}
+
+.info h4,
+.info h6 {
+  font-weight: 400;
+}
+
+.info h6 {
+  font-size: 15px;
+}
+
+.chat-box .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.chat-box .box .chats {
+  height: 100%;
+  margin: 15px 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  position: relative;
+  overflow: auto;
+}
+
+.chat-box .box .chats::-webkit-scrollbar {
+  width: 3px;
+}
+
+.chat-box .box .chats::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-box .box .chats::-webkit-scrollbar-thumb {
+  background: #acabab;
+  border-radius: 6px;
+}
+
+.chat-box .box .chats::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.chat-box .box .footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box .footer-box {
+  margin: 15px 10px;
+  padding: 10px;
+  height: 50px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chat-box .footer-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  font-size: 20px;
+  text-align: bottom;
+}
+
+.chat-box .footer-box input:focus,
+.chat-box .footer-box input:active {
+  outline: none;
+  border-style: solid;
+  border-width: 0;
+  border-bottom: 1px solid #333;
+}
+
+.chat-box .footer-box button {
+  width: 6%;
+  height: 100%;
+  border: none;
+  box-shadow: 1px 1px 5px 1px #ddd;
+  background: transparent;
+  cursor: pointer;
+}
+
+.messages {
+  display: flex;
+}
+
+.messages.right {
+  justify-content: end;
+}
+
+.messages.left {
+  justify-content: start;
+}
+
+.message {
+  display: inline-block;
+  padding: 6px 15px;
+  text-align: end;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.messages.right .message {
+  border-top-left-radius: 0;
+}
+
+.messages.left .message {
+  border-top-right-radius: 0;
+}
+
+.popover {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: opacity 0.3s;
+  box-shadow: 1px 1px 5px 1px #ddd;
+}
+
+.chat-box-message {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.chat-app .chat-list {
+  position: relative;
+}
+
+.add-button {
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+}
+
+.add-button button {
+  border-radius: 18px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  box-shadow: 1px 1px 5px 1px #d4d4d4;
+  cursor: pointer;
+}
+
+.add-user {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-user form {
+  margin: 10px 15px;
+  width: 30%;
+  height: auto;
+  box-shadow: 1px 1px 5px 1px #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.add-user form input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  font-size: 18px;
+  text-align: bottom;
+  padding: 10px auto;
+}
+
+.add-user form input:focus,
+.add-user form input:active {
+  outline: none;
+  border-style: solid;
+  border-width: 0;
+  border-bottom: 1px solid #333;
+}
+
+.add-user .footer {
+  display: flex;
+  gap: 20px;
+}
+
+.add-user .footer button {
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  box-shadow: 1px 1px 5px 1px #d4d4d4;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.add-user .get-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
